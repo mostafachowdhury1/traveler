@@ -1,0 +1,640 @@
+*{
+    margin: auto 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+}
+body{
+    height: 300px;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align:center;
+    padding: 2.5rem 0rem;
+}
+
+.heading span{
+    color:orange;
+    background: #555;
+    font-size:2rem;
+    padding:.7rem 1.5rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    
+}
+.heading span.space{
+    background:none;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 6 rem;
+}
+
+header{
+    position: fixed;
+    top:0%;left:0%;right: 0%;
+
+    background: #555;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color:white;
+    font-weight: bolder
+}
+
+header .logo span{
+    color:orange;
+}
+
+header .navbar a{
+    color:white;
+    font-size: 2rem;
+    margin: 0 .8rem;
+   
+}
+
+header .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    transform: translateY(0);
+}
+
+header .navbar a:hover{
+    color:orange;
+}
+
+
+
+header .icons i{
+    color:white;
+    font-size: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+
+}
+
+
+header .icons i:hover{
+    color:orange;
+}
+
+header .search-bar-container{
+    position: absolute;
+    top:100%;left: 0%;right: 0%;;
+    display: flex;
+   border-top: 1px solid honeydew;
+    padding: 1.5rem 2rem;
+    background-color: #555;
+    align-items: center;
+    z-index: 1000;
+    
+    clip-path: polygon(0 0,0 100%,0 100%,0 0);
+}
+
+header .search-bar-container.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+header .search-bar-container #search-bar{
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color:black;
+    border-radius: 5px;
+}
+
+header .search-bar-container label{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+header .search-bar-container label:hover{
+    color:orange;
+}
+
+
+/* 
+menubarrrr-icon */
+
+#manubar{
+    font-size: 3rem;
+    color:white;
+    border:.1rem solid white;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    display: none;
+
+}
+
+
+
+.login-from-container{
+    position: fixed;
+    top:100%;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.801);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+   
+    justify-content: center;
+}
+ 
+.login-from-container.active{
+    top:0;
+}
+
+.login-from-container form{
+    margin: 1.5rem;
+    padding: 2rem 2rem;
+    background: #fff;
+ 
+    width: 50rem;
+}
+
+.login-from-container form h4{
+font-size:2rem;
+text-transform: capitalize;
+color: black;
+text-align: center;
+padding: 1rem ;
+}
+.login-from-container form .box{
+    width: 100%;
+    margin:.6rem ;
+    padding:1rem;
+    border:.1rem solid rgba(0, 0, 0, 03)
+}
+
+.login-from-container form .box:focus{
+    background-color: rgb(128, 126, 126);
+}
+
+.login-from-container form  #remember{
+ margin: 2rem 0rem;
+
+}
+
+.login-from-container form  label{
+    font-size: 2rem;
+}
+
+.btn{
+    background-color: orange;
+    display: inline-block;
+    color:white;
+    padding:1rem 2rem;
+    border: .1rem solid gray;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background-color: azure;
+    color:orange;
+}
+
+.login-from-container form .btn{
+    display: block;
+    width: 100%;
+}
+
+.login-from-container #close{
+    position: absolute;
+    top:2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color:white;
+}
+
+/* home */
+
+.home{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    flex-flow: column;
+    position: relative;
+    min-height:100vh;
+    z-index: 0;
+}
+
+.home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+ 
+    
+}
+.home .content h2{
+    text-transform: capitalize;
+    font-size: 2.9rem;
+    padding: 2rem;
+    color:rgb(241, 241, 62);
+}
+
+.home .content p{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 2rem;
+    color:black;
+}
+
+.home .video-container video{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    object-fit:cover;
+ 
+}
+
+.home .controls{
+    padding: 1rem;
+    position: relative;
+    border-radius: 5rem;
+    top:10rem;
+    background: #555;
+}
+
+.home .controls .vid-btn{
+ height: 2rem;
+ width:2rem;
+ display: inline-block;
+background: #fff;
+cursor: pointer;
+border-radius: 50%;
+margin: 0 0.5rem;
+}
+
+.home .controls .vid-btn.active{
+    background-color: orange;
+}
+
+.book .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5 rem;
+}
+
+.book .row .image{
+flex: 1 1 40rem;
+}
+
+.book .row .image img{
+    width: 100%;
+   
+}
+
+.book .row form{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  border-radius: .5rem;
+  box-shadow:0 1rem 2rem rgba(139, 130, 130, 0.767);
+}
+
+
+.book .row form .inpit-box{
+    padding:0.5rem 0rem;
+}
+
+.book .row form .inpit-box input{
+    width: 100%;
+    padding: 1.5rem ;
+    border: .1rem solid rgba(0, 0, 0, 0.521);
+    font-size: 1.6rem;
+    text-transform: none;
+}
+
+.book .row form h4{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: orange;
+    padding: 1rem 0rem
+}
+
+
+
+/* pakages */
+
+.pakages .box-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:2rem;
+
+}
+
+.pakages .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 1rem 1rem rgba(128, 126, 126, 0.548);
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+.pakages .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.pakages .box-container .box .content {
+    padding: 2rem;
+}
+.pakages .box-container .box .content h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:darkcyan;
+
+    
+}
+
+.pakages .box-container .box .content h2 i{
+    color:orange;
+}
+
+.pakages .box-container .box .content p{
+ font-size: 1.5rem;
+ padding: .3rem;
+ color:rgb(90, 86, 86);
+ text-transform: capitalize;
+}
+
+.pakages .box-container .box .content div{
+    font-size: 1.5rem;
+}
+
+.pakages .box-container .box .content div span{
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    color:red;
+}
+
+
+.pakages .box-container .box .content .stars i{
+    font-size: 2rem;
+    color: orange;;
+}
+
+.service .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service .box-container .box{
+flex: 1 1 30rem;
+border-radius: 0.5rem;
+text-align: center;
+padding: 2.5rem;
+}
+
+.service .box-container .box i{
+    font-size: 5rem;
+    color: orange;
+    padding: 1rem;
+}
+
+.service .box-container .box h2{
+    font-size:2.5rem;
+    color:grey;
+}
+
+.service .box-container .box p{
+    font-size: 1.5rem;
+    color: darkseagreen;
+    padding: 1rem 0;
+}
+
+.service .box-container .box:hover{
+    box-shadow: 0 1rem 2rem rgb(128, 126, 126);
+}
+
+
+/* tour */
+
+
+.tour .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.6rem
+}
+
+.tour .box-container .box{
+    position: relative;
+    overflow: hidden;
+   flex: 1 1 30rem;
+   height: 25rem;
+   border-radius: 0.6rem;
+   
+}
+
+.tour .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour .box-container .box .content{
+    position: absolute;
+    top:-120%;left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 34, 34, 0.197);
+    padding-top:5rem;
+  text-align: center;
+}
+
+.tour .box-container .box:hover .content{
+    top:0;left:0;
+}
+
+.tour .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: cadetblue;
+    text-transform: capitalize;
+}
+
+
+.tour .box-container .box .content  p{
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem;
+    text-transform: capitalize;
+}
+
+
+.reviw .reviw-slider{
+   padding-bottom: 2rem;
+}
+
+.reviw .box{
+    text-align: center;
+    box-shadow: 0 1rem 1rem rgba(139, 130, 130, 0.767);
+    border-radius: 0.5rem;
+    padding: 2rem;
+
+}
+
+.reviw .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviw .box  h2{
+    font-size: 2.3rem;
+    color:rgb(7, 110, 76)
+}
+.reviw .box  p{
+    font-size: 1.3rem;
+    color:rgb(49, 51, 50);
+    padding: 0.5rem 0;
+    
+}
+
+.reviw .box .stars i{
+    font-size: 1.5rem;
+    color:orange;
+}
+
+
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+.contact .row .image{
+    flex: 1 1 30rem;
+}
+.contact .row .image img{
+    width: 100%;
+}
+
+.contact .row form{
+    flex: 1 1 40rem;
+    box-shadow: 0 1rem 1rem rgb(128, 126, 126);
+    padding: 2rem;
+}
+.contact .row form .input-box{
+   display: flex;
+   justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.contact .row form .input-box input{
+    width: 49%;
+    background: rgb(194, 184, 184);
+    margin:1rem 0;
+    font-size: 1.7rem;
+    padding: 1.1rem;
+    border-radius: 0.3rem;
+}
+
+.contact .row form  textarea{
+    width: 100%;
+    height: 15%;
+    font-size: 1.7rem;
+    padding: 1.1rem;
+    background-color: aquamarine;
+}
+
+
+.brand .brand-slider{
+    padding: 2rem;
+}
+
+.brand .box img{
+    height: 15rem;
+    width: 30rem;
+ 
+    object-fit: cover;
+}
+
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+
+
+@media (max-width:991px){
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width:768px){
+    #manubar{
+        display: initial;
+    }
+
+    header .navbar{
+    position: absolute;
+    top:100%;
+    left:0%;
+    right: 0%;
+    background: #555;
+    border-top: .1rem solid whitesmoke;
+    padding: 1.5rem 2rem;
+    
+    clip-path: polygon(0 0,0 100%,0 100%,0 0);
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 1rem 0rem;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        background-color: #222;
+        text-transform: capitalize;
+    }
+}
+
+
+
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .contact .row form .input-box input{
+        width: 100%;
+    }
+}
