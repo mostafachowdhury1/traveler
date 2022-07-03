@@ -79,11 +79,15 @@ var swiper = new Swiper(".barnd-slider", {
   },
 
  breakpoints:{
+    440:{
+        
+      slidesPerView:1,
+    },
     640:{
-        slidesPerView:1,
+        slidesPerView:2,
     },
     768:{
-        slidesPerView:2,
+        slidesPerView:3,
     },
     1024:{
         slidesPerView:6,

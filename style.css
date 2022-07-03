@@ -570,16 +570,80 @@ padding: 2.5rem;
 
 .brand .brand-slider{
     padding: 2rem;
+   text-align: center;
 }
+
+.brand .brand-slider .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .brand .box img{
     height: 15rem;
     width: 30rem;
- 
+    text-align: center;
     object-fit: cover;
 }
 
+.footer {
+    background-color: #555;
+}
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+  
+}
 
+.footer .box-container .box{
+    flex: 1 1 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0.5rem 0.6rem rgb(7, 110, 76);
+    margin: 0.6rem;
+   
+}
+
+.footer .box-container .box h4{
+    font-size: 2rem;
+    color:black;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    border-bottom: 1px solid white;
+}
+
+.footer .box-container .box a{
+    color:black;
+
+    padding:0.7rem;
+    font-size:1.3rem;
+    text-transform: capitalize;
+}
+
+.footer .box-container .box a:hover{
+    color:orange;
+}
+
+
+ .credit{
+    text-align: center;
+    padding:2rem 1rem;
+    background-color: rgb(85, 77, 77);
+}
+
+.credit p{
+    font-size: 1.7rem;
+   text-transform: capitalize;
+}
+
+.credit p span{
+    color:orange;
+  text-transform: capitalize;
+  margin-right: 0.5rem;
+}
 
 @media (max-width:1200px){
     html{
